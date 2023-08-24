@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="css/main.css">
     <title>Document</title>
 </head>
 
@@ -40,7 +40,6 @@
                     title="You have to write something" autocomplete="off" />
                 <button class="btn btn-add-line tooltip" onclick="onAddLine()" title="Add text line">
                     <img src="icons/add.png" />
-                    <span class="tooltiptext" data-trans="tooltip"> &nbsp;First: add a new line</span>
                 </button>
                 <button class="btn btn-remove-line" onclick="onRemoveLine()" title="Delete text line">
                     <img src="icons/trash.png" />
@@ -113,42 +112,33 @@
         </div>
     </main>
     <main class="gallery-container">
-<section class="search-filter">
-    <div class="search-filter-container main-layout flex flex-column justify-center align-center">
-        <div class="search-form" onsubmit="onsearch(event)">
-            <input
-            list="search-words"
-            class="search"
-            name="search"
-            placeholder="Enter search keyword"
-            autocomplete="off"
-            data-trans="search-placeholder"
-          />
-          <datalist id="search-words"></datalist>
-          <button class="search-btn" type="button">
-            <img src="icons/search-icon.png" />
-          </button>
-        </form>
-        </div>
-        <div class="fillter-container flex align-center">
-            <div>
-              <ul
-                class="
+        <section class="search-filter">
+            <div class="search-filter-container main-layout flex flex-column justify-center align-center">
+                <div class="search-form" onsubmit="onsearch(event)">
+                    <input list="search-words" class="search" name="search" placeholder="Enter search keyword"
+                        autocomplete="off" data-trans="search-placeholder" />
+                    <datalist id="search-words"></datalist>
+                    <button class="search-btn" type="button">
+                        <img src="icons/search-icon.png" />
+                    </button>
+                    </form>
+                </div>
+                <div class="fillter-container flex align-center">
+                    <div>
+                        <ul class="
                   keywords-container
                   clean-list
                   flex
                   align-center
-                  flex-wrap
-                "
-              ></ul>
+                  flex-wrap">
+                </ul>
+                    </div>
+
             </div>
-            <div class="btn-more" onclick="onToggleMore(this)">More...</div>
-          </div>
+        </section>
+        <section class="images-container main-layout grid"></section>
         </div>
-      </section>
-      <section class="images-container main-layout grid"></section>
-    </div>
-</section>
+        </section>
 
 
     </main>
