@@ -1,0 +1,72 @@
+@import url(./helpers.css);
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    height: 100vh;
+    background-color: #e3e3e3;
+
+}
+
+.main-header{
+    background-color: #ff7f00;
+    color: white;
+
+}
+.header-container{
+    height: 66px;
+}
+.header-logo{
+    width: 150px;
+}
+.gallery-container .search-fillter {
+    background-color: white;
+    margin-bottom: 20px;
+  }
+  
+  .gallery-container .search-fillter-container {
+    gap: 15px;
+    height: 100px;
+  }
+  
+  .search-form .search {
+    border: none;
+    border-bottom: 3px solid black;
+    font-size: 1rem;
+    font-family: mont;
+  }
+  
+  .search-form .search-btn {
+    border: none;
+    background-color: transparent;
+    position: relative;
+    right: 15%;
+    top: 5px;
+    cursor: pointer;
+  }
+  .search-form .search-btn img{
+    width: 20px;
+  }
+  
+  .keywords-container li a {
+    text-decoration: none;
+    color: #000000;
+  }
+  
+  .fillter-container .btn-more {
+    cursor: pointer;
+    color: #ff7f00;
+    font-family: mont;
+    font-weight: bold;
+  }
+  
+  .gallery-container .images-container,
+  .meme-container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+    justify-items: center;
+    margin-bottom: 20px;
+  }
