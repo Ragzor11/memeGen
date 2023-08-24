@@ -27,6 +27,9 @@ var gMeme = {
     stickers: [],
 }
 function getImgs() {
-    return gImgs;
+    return gImgs
 
 }
+function setImg(id) {
+    gMeme.selectedImgId = id
+  }
