@@ -1,0 +1,12 @@
+footer {
+    height: 130px;
+    margin-block-start: 30px;
+    color: whitesmoke;
+    background-color: #ff7f00;
+}
+
+footer img {
+    width: 140px;
+    height: 25px;
+    margin-bottom: 10px;
+}
