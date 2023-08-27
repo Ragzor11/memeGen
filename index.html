@@ -23,9 +23,18 @@
         </section>
         <section class="lower-header grid main-layout">
             <div class="controls flex align-center justify-space">
-                <label class="search-bar flex justify-space align-center"> <input type="search"
-                        placeholder="Enter search keyword"> <img src="design/search-icon.png" alt="Magnifying glass">
-                </label>
+                <form class="search-bar flex justify-space align-center">
+                    <input
+                      type="search"
+                      placeholder="Enter search keyword"
+                      class="search-bar flex justify-space align-center"
+                      list="keywordsList"
+                      name="filter"
+                      title="Filter"
+                      data-trans="search"
+                      oninput="onSetFilterBy(this)"
+                    />
+                  </form>
                 <article class="filter-by-words flex">
                     <a href="">Funny</a>
                     <a href="">Cats</a>

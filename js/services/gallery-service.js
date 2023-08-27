@@ -1,9 +1,10 @@
 'use strict'
+let gFilterBy = ''
 var gImgs = [
     { id: 1, url: 'imgs/1.jpg', keywords: ['politics', 'angry', 'people'] },
-    { id: 2, url: 'imgs/2.jpg', keywords: ['animal', 'cute', 'happy'] },
-    { id: 3, url: 'imgs/3.jpg', keywords: ['baby', 'cute', 'animal'] },
-    { id: 4, url: 'imgs/4.jpg', keywords: ['animal', 'cute'] },
+    { id: 2, url: 'imgs/2.jpg', keywords: ['animal', 'cute', 'dog'] },
+    { id: 3, url: 'imgs/3.jpg', keywords: ['baby', 'cute', 'dog'] },
+    { id: 4, url: 'imgs/4.jpg', keywords: ['cat', 'cute'] },
     { id: 5, url: 'imgs/5.jpg', keywords: ['baby', 'happy', 'funny'] },
     { id: 6, url: 'imgs/6.jpg', keywords: ['people', 'crazy'] },
     { id: 7, url: 'imgs/7.jpg', keywords: ['funny', 'baby', 'cute', 'happy'] },
@@ -25,6 +26,14 @@ function goToGallery(ev) {
     showGallery()
 }
 
+function renderGallery() {
+    const imgs = getImgs()
+    const elGallery = document.querySelector('.gallery')
+    let strHTML = ''
+    imgs.forEach(img => strHTML += `<img src=${img.url} data-img-id=${img.id} onclick="onImgSelect(this)">`)
+    elGallery.innerHTML = strHTML
+}
+
 function hideGallery() {
     document.querySelector('.gallery').classList.add('hidden')
     document.querySelector('.lower-header').classList.add('hidden')
@@ -44,3 +53,15 @@ function setImg(id) {
         }
     ]
 }
+function setFilterBy(filterBy) {
+    gFilterBy = filterBy
+  }
+  function getImgs() {
+    if (gFilterBy === '') {
+      return gImgs
+    }
+  
+    return gImgs.filter(img =>
+      img.keywords.some(keyword => keyword.includes(gFilterBy))
+    )
+  }
